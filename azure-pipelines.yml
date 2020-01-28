@@ -1,4 +1,15 @@
 # Starter pipeline
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'vmvm'
+    subscriptionId: '0a16f815-6d4d-4b09-9b2b-575458aa53de'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'raghu'
+    location: 'Central US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'a'
+    deploymentMode: 'Incremental'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
